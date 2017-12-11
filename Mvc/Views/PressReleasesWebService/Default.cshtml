@@ -1,0 +1,38 @@
+@model SitefinityWebApp.Mvc.Models.PressReleasesWebServiceModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+
+@Html.Script(ScriptRef.JQuery, "top")
+@Html.Script(Url.WidgetContent("~/MVC/scripts/PressReleaseWebService/script.js"))
+
+<h1>JS-based resource owner sample</h1>
+<div>
+	<label>username</label>
+	<input id="username" placeholder="test@test.test" />
+</div>
+<div>
+	<label>password</label>
+	<input id="password" type="text"/>
+</div>
+<div>
+	<div>
+		<label>Title</label>
+		<input id="title" />
+	</div>
+	<div>
+		<label>Content</label>
+		<input id="content" type="text"/>
+	</div>
+</div>
+<div>
+	<button id="getTokenBtn">Get Token with Credentials</button>
+	<button id="getTokenWithRefreshBtn">Get Token with Refresh Token</button>
+	<button id="apiCallBtn">Api Call</button>
+	<button id="createPRBtn">Create Press Release</button>
+</div>
+<div>  Token: <label id="token"></label></div>
+<br />
+<div>Refresh Token:<label id="refreshToken"></label></div>
+<br />
+<div>Api Result:<p id="apiResult"></p></div>
