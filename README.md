@@ -9,3 +9,5 @@ Sample of using Sitefinity Odata web services.
 * Username: service@progress.com Password: password has create credentials for the Press Release Content(custom) type 
 
 There is only one page in the website with a custom MVC widget to show how to retrieve the token, use the refresh token, make 'get' request, and make a 'post' request.
+
+Sample widget code is in the MVC folder.
