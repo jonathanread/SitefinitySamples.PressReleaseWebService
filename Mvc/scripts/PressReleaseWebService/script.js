@@ -9,11 +9,11 @@ var refreshToken;
 $(document).ready(function () {
 	$("#getTokenBtn").on("click", getToken);
 	$("#getTokenWithRefreshBtn").on("click", getAccessTokenFromRefreshToken);
-	$("#apiCallBtn").on("click", callApi);
+	$("#apiCallBtn").on("click", getFirstItem);
 	$("#createPRBtn").on("click", createPressRelease);
 });
 
-
+//call api to get token for all use in other functions
 function getToken(e) {
 	e.preventDefault();
 
@@ -46,6 +46,7 @@ function getToken(e) {
 	});
 	return false;
 }
+
 //Call that gets new access and refresh token from the current refresh token
 function getAccessTokenFromRefreshToken() {
 	$.ajax({
@@ -70,8 +71,9 @@ function getAccessTokenFromRefreshToken() {
 		}
 	})
 }
+
 //Sitefinity Web API call with access token as a bearer token
-function callApi(e) {
+function getFirstItem(e) {
 	e.preventDefault();
 	$.ajax({
 		url: apiUrl,
@@ -95,6 +97,7 @@ function callApi(e) {
 	return false;
 }
 
+//call api to create press release item from text boxes
 function createPressRelease(e) {
 	e.preventDefault();
 	var data = JSON.stringify(
@@ -136,3 +139,6 @@ function createPressRelease(e) {
 
 	return false;
 }
+
+
+
