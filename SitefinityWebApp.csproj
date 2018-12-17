@@ -1092,6 +1092,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Sitefinity.mdf" />
+    <Content Include="App_Data\Sitefinity_log.ldf">
+      <DependentUpon>Sitefinity.mdf</DependentUpon>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Mvc\scripts\PressReleaseWebService\script.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\css\main.css" />
